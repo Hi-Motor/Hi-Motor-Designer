@@ -1,0 +1,72 @@
+##############################
+# build
+##############################
+*.egg-info/**
+**/__pycache__/**
+build/
+dist/
+**/__version__.py
+
+## cython
+*.c
+
+## pyinstaller
+*.spec
+
+##############################
+# dev tools
+##############################
+uv.lock
+
+## pdoc
+**/docs/
+
+## viztracer
+result.json
+
+## coredumpy
+dumps/
+
+## coverage
+.coverage*
+report/
+htmlcov/
+
+## pytest
+.pytest_cache/
+
+## mypy
+.mypy_cache/
+
+## ruff
+.ruff_cache/
+
+##############################
+# runtime
+##############################
+## log
+**/log/*.log
+**/log/*.log.error
+**/log/*.png
+**/log/*.jpg
+!example.log
+
+## env
+**/.env
+.venv*
+
+output/
+
+##############################
+# other
+##############################
+**/ignore/
+**/temp/**
+
+# MacOS
+**/.DS_Store
+
+##############################
+# sub modules
+##############################
+examples

@@ -1,0 +1,49 @@
+[build-system]
+requires = [ "setuptools", "setuptools-scm" ]
+build-backend = "setuptools.build_meta"
+
+# ===================
+# Project
+# ===================
+[project]
+name = "hi-motor-designer"
+authors = [
+    {name = "Hi-Motor Team", email = "hi.motor.cn@gmail.com"},
+    {name = "Mingyang Bao", email = "mingyangbob@gmail.com"},
+]
+maintainers = [
+    {name = "Hi-Motor Team", email = "hi.motor.cn@gmail.com"},
+    {name = "Mingyang Bao", email = "mingyangbob@gmail.com"}
+]
+readme = 'README.md'
+license-files = [ "LICENSE.txt" ]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+]
+requires-python = ">= 3.10"
+dynamic = [
+    "version"
+]
+dependencies = []
+[project.optional-dependencies]
+dev = []
+
+[project.urls]
+Homepage = "https://designer.hi-motor.site"
+Documentation = "https://designer.hi-motor.site/getting-start/what-is-hmd"
+Repository = "https://github.com/Hi-Motor/Hi-Motor-Designer.git"
+Download = "https://github.com/Hi-Motor/Hi-Motor-Designer/releases/latest"
+Issues = "https://github.com/Hi-Motor/Hi-Motor-Designer/issues"
+
+[project.scripts]
+hmd = "hmd.__main__:main"
+
+# ===================
+# Build
+# ===================
+[tool.setuptools_scm]
+version_file = "hmd/__version__.py"
+
+[tool.setuptools.packages.find]
+include = ["hmd"]
